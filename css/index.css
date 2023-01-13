@@ -1,4 +1,4 @@
-html, body{
+html, body {
   padding: 0px;
   margin: 0px;
   font-family: Noto Sans KR,sans-serif;
@@ -6,6 +6,11 @@ html, body{
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
+}
+
+.choose-team {
+  padding: 10px;
+  border-bottom: 2px solid #fff;
 }
 
 .card {
