@@ -11,38 +11,39 @@
 </head>
 <body>
   <div class="main">
-    <div class="choose-team">
-      
-      <!-- <input type="checkbox" name="person-team" id="ruby">
-      <label for="ruby">Ruby</label>
-      <input type="checkbox" name="person-team" id="king">
-      <label for="king">King</label>
-      <input type="checkbox" name="person-team" id="tsubasa">
-      <label for="tsubasa">Tsubasa</label>
-      <input type="checkbox" name="person-team" id="annabella">
-      <label for="annabella">Annabella</label>
-      <input type="checkbox" name="person-team" id="saki">
-      <label for="saki">Saki</label>
-      <input type="checkbox" name="person-team" id="frigg">
-      <label for="frigg">Frigg</label>
-      <input type="checkbox" name="person-team" id="merly">
-      <label for="merly">Merly</label>
-      <input type="checkbox" name="person-team" id="zero">
-      <label for="zero">Zero</label> -->
-    </div>
     <div class="team">
       <div class="card">
-        
+        <select name="char-1" id="first-char" onchange="imprime(this.id)"></select>
+        <div class="char-icon-1">
+          <div class="tempo-1">
+            <span class="contador">1234</span>
+          </div>
+        </div>
+        <input type="text" maxlength="1" id="arma-1" onclick="limpaCampo(this.id)">
       </div>
       <div class="card">
-        
+        <select name="char-1" id="second-char" onchange="imprime(this.id)"></select>
+        <div class="char-icon-2">
+          <div class="tempo-2">
+            <span class="contador"></span>
+          </div>
+        </div>
+        <input type="text" maxlength="1" id="arma-2" onclick="limpaCampo(this.id)">
       </div>
       <div class="card">
-        
+        <select name="char-1" id="third-char" onchange="imprime(this.id)"></select>
+        <div class="char-icon-3">
+          <div class="tempo-3">
+            <span class="contador"></span>
+          </div>
+        </div>
+        <input type="text" maxlength="1" id="arma-3" onclick="limpaCampo(this.id)">
       </div>
     </div>
   </div>
-
-  <script src="js/renderChooseTeam.js"></script>
+  
+  <script src="js/database.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/skills.js"></script>
 </body>
 </html>
