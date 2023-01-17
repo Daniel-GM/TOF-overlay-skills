@@ -41,6 +41,7 @@ html, body {
 }
 
 .char-icon-1, .char-icon-2, .char-icon-3{
+  background-image: url(../img/armas/Icon_Item_SSR_Weapon_Box.webp);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -61,7 +62,7 @@ html, body {
   color: #fff;
 }
 
-#arma-1, #arma-2, #arma-3 {
+#arma-1, #arma-2, #arma-3, #skill {
   margin: 0px;
   border: none;
   width: 100%;
@@ -69,4 +70,11 @@ html, body {
   padding: 3px 0px;
   color: #fff;
   text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }

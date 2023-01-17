@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
   <link rel="stylesheet" href="css/index.css">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,35 +12,43 @@
   <div class="main">
     <div class="team">
       <div class="card">
-        <select name="char-1" id="first-char" onchange="imprime(this.id)"></select>
+        <select name="char-1" id="first-char" onchange="imprime(this.id)">
+          <option value="" disabled selected>Selecione uma arma</option>
+        </select>
         <div class="char-icon-1">
           <div class="tempo-1">
-            <span class="contador">1234</span>
+            <span class="contador"></span>
           </div>
         </div>
-        <input type="text" maxlength="1" id="arma-1" onclick="limpaCampo(this.id)">
+        <input type="text" maxlength="1" id="arma-1" onclick="limpaCampo(this.id)" placeholder="Primeira arma">
       </div>
       <div class="card">
-        <select name="char-1" id="second-char" onchange="imprime(this.id)"></select>
+        <select name="char-1" id="second-char" onchange="imprime(this.id)">
+          <option value="" disabled selected>Selecione uma arma</option>
+        </select>
         <div class="char-icon-2">
           <div class="tempo-2">
             <span class="contador"></span>
           </div>
         </div>
-        <input type="text" maxlength="1" id="arma-2" onclick="limpaCampo(this.id)">
+        <input type="text" maxlength="1" id="arma-2" onclick="limpaCampo(this.id)" placeholder="Segunda arma">
       </div>
       <div class="card">
-        <select name="char-1" id="third-char" onchange="imprime(this.id)"></select>
+        <select name="char-1" id="third-char" onchange="imprime(this.id)">
+          <option value="" disabled selected>Selecione uma arma</option>
+        </select>
         <div class="char-icon-3">
           <div class="tempo-3">
             <span class="contador"></span>
           </div>
         </div>
-        <input type="text" maxlength="1" id="arma-3" onclick="limpaCampo(this.id)">
+        <input type="text" maxlength="1" id="arma-3" onclick="limpaCampo(this.id)" placeholder="Terceira arma">
       </div>
     </div>
+    <div class="input-skill">
+      <input type="text" maxlength="1" id="skill" onclick="limpaCampo(this.id)" placeholder="Skill">
+    </div>
   </div>
-  
   <script src="js/database.js"></script>
   <script src="js/index.js"></script>
   <script src="js/skills.js"></script>

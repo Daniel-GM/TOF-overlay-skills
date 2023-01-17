@@ -4,11 +4,11 @@ let arma
 let arma1 = $('#arma-1')
 let arma2 = $('#arma-2')
 let arma3 = $('#arma-3')
+let skill = $('#skill')
 
 
 body.addEventListener("keypress", function(event) {
   let botao = event.key
-  
 
   if(botao.toUpperCase() === arma1.val() || 
   botao.toUpperCase() === arma2.val() || 
@@ -16,7 +16,7 @@ body.addEventListener("keypress", function(event) {
     historico.push(botao)
   }
 
-  if (botao === "1") {
+  if (botao === skill.val()) {
     if (historico.slice(-1)[0] != "1") 
       historico.push(botao)
     arma = historico.slice(-2)

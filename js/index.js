@@ -53,13 +53,43 @@ function limpaCampo(id) {
 }
 
 function selectWeapon(arma) {
-  console.log(arma)
   if($('.card #arma-1').val() === arma){
     for(let i = personagens.length; i >= 0 ; i--) {
-      if(personagens[i] == $('#first-char').val())
-        $('.contador')[0].innerHTML = tempo[i]
+      if(personagens[i] == $('#first-char').val()){
         $('.tempo-1').css('display', 'flex')
+        timer(tempo[i], $('.tempo-1 .contador')[0], $('.tempo-1'))
+      }
+    }
+  } else if($('.card #arma-2').val() === arma){
+    for(let i = personagens.length; i >= 0 ; i--) {
+      if(personagens[i] == $('#second-char').val()){
+        $('.tempo-2').css('display', 'flex')
+        timer(tempo[i], $('.tempo-2 .contador')[0], $('.tempo-2'))
+      }
+    }
+  } else if($('.card #arma-3').val() === arma){
+    for(let i = personagens.length; i >= 0 ; i--) {
+      if(personagens[i] == $('#third-char').val()){
+        $('.tempo-3').css('display', 'flex')
+        timer(tempo[i], $('.tempo-3 .contador')[0], $('.tempo-3'))
+      }
     }
   }
 }
 
+function timer(tempo, campo, display){
+  campo.innerHTML = tempo
+  
+  let contador = new Date().getTime() + ((tempo+1)*1000)
+  let x = setInterval(() => {
+    let agora = new Date().getTime();
+    let distancia = contador - agora
+    let segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+    campo.innerHTML = segundos
+
+    if (distancia < 0) {
+      clearInterval(x);
+      display.css('display', 'none')
+    }
+  }, 1000)
+}
